@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -12,6 +16,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "SEGMENT_WRITE_KEY", properties['SEGMENT_WRITE_KEY'])
     }
 
     buildTypes {
@@ -47,8 +52,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "com.segment.analytics.android:analytics:4.+"
 

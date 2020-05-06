@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements FSOnReadyListener
         setContentView(R.layout.activity_main);
         FS.setReadyListener(this);
 
-        Analytics.with(getApplicationContext()).identify("testuser!!!!!!!Release");
+        Analytics.with(getApplicationContext()).identify("test_fs_integration_1");
     }
 
     @Override

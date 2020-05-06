@@ -14,7 +14,7 @@ public class App extends Application {
 
         // Segment integration
         // Create an analytics client with the given context and Segment write key.
-        Analytics analytics = new Analytics.Builder(getApplicationContext(), "")
+        Analytics analytics = new Analytics.Builder(getApplicationContext(), BuildConfig.SEGMENT_WRITE_KEY)
                 // Enable this to record certain application events automatically!
                 .logLevel(Analytics.LogLevel.VERBOSE)
 //                .use(FirebaseIntegration.FACTORY)
