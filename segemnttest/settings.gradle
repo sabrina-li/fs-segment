@@ -1,0 +1,3 @@
+rootProject.name='segemnttest'
+include ':app'
+include ':fsintegration'
